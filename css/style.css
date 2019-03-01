@@ -67,5 +67,10 @@ body{
 .carousel-item {
     height: 700px;
 }
-
+#restaurant-video{
+    clear:both;
+}
+#restaurant-img{
+    max-height:690px;
+}
 }
