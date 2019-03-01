@@ -1,0 +1,75 @@
+
+.bg-custom {
+    background-color: #000;
+    color:#fff;
+}
+
+.custom-font {
+    font-family: 'Patua One', cursive;
+    font-size: 30px !important;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #0009;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid #ffff;
+    border-radius: 50%;
+}
+
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: #ffff;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    height:500px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+}
+@media only screen and (min-width:768px){
+body{
+    margin:0;
+}
+.bg-custom {
+        position: absolute;
+        background:none;
+        width: 100%;;
+ }
+ .navbar a{
+     color:#000 !important;
+    
+ }
+ .navbar-nav a{
+     color:#fff !important;
+     font-size: 20px;
+ }
+#recipe{
+    margin:0;
+    width:60%;
+    float:right;    
+}
+.carousel{
+    margin:0 !important;
+  
+}
+.carousel-item {
+    height: 700px;
+}
+
+}
