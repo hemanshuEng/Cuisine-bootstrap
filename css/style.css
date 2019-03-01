@@ -38,6 +38,32 @@
     text-align: center;
     background: rgba(0, 0, 0, 0.4);
 } 
+.lobster{
+    font-family: 'Lobster', cursive; 
+    font-size: 30px;
+}
+#resutarant-info{
+    /* position: relative ;
+    background: url("../img/pexels-photo-1640774.jpeg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative; */
+    position: relative;
+    background: url("../img/pexels-photo-1640774.jpeg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+    color:#ffff;
+}
+.dark-overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background:rgba(0,0,0,0.5); */
+}
 @media only screen and (min-width:768px){
 body{
     margin:0;
@@ -72,5 +98,8 @@ body{
 }
 #restaurant-img{
     max-height:690px;
+}
+#resutarant-info{
+    min-height: 200px;
 }
 }

@@ -8,9 +8,11 @@
     <title>Cuisine</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Pacifico|Patua+One" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/odometer-theme-default.css">
+    <script src="./js/odometer.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -103,7 +105,7 @@
                     <img src="img/pexels-photo-1528013.jpeg" alt="" class="w-100 " id="restaurant-img">
                 </div>
                 <div class="col-md-6">
-                    <h4 class="p-3 text-danger mt-md-5">About</h4>
+                    <h4 class="p-3 text-danger mt-md-5 lobster">About</h4>
                     <h2 class="p-3">Welcome To cuisine Restaurant</h2>
                     <p class="p-3 text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae ab sequi
                         beatae velit assumenda provident laudantium, perferendis quia reprehenderit itaque? Aperiam
@@ -127,7 +129,29 @@
             </div>
         </div>
     </section>
-
+    <!-- Resutarant info-->
+    <section id="resutarant-info">
+        <div class="dark-overlay">
+            <div class="row mt-lg-5">
+                <div class="col-md-3 m-4 m-lg-0">
+                    <h2 class="odometer" id="odo-year">0</h2>
+                    <h6>Years of Experienced</h6>
+                </div>
+                <div class="col-md-3 m-4 m-lg-0">
+                    <h2 class="odometer" id="new-odo"></h2>
+                    <h6>Happy Customers</h6>
+                </div>
+                <div class="col-md-3 m-4 m-lg-0">
+                    <h2 class="odometer" id="odo-project">8</h2>
+                    <h6>Finished Projects</h6>
+                </div>
+                <div class="col-md-3 m-4 m-lg-0">
+                    <h2 class="odometer" id="w-days"></h2>
+                    <h6>Working Days</h6>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
@@ -138,8 +162,33 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
     <script>
         $('#year').text(new Date().getFullYear());
+        $(document).ready(function () {
+           
+
+            $(window).scroll(function () {
+                // This is then function used to detect if the element is scrolled into view
+                function elementScrolled(elem) {
+                    var docViewTop = $(window).scrollTop();
+                    var docViewBottom = docViewTop + $(window).height();
+                    var elemTop = $(elem).offset().top;
+                    return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
+                }
+
+                // This is where we use the function to detect if ".box2" is scrolled into view, and when it is add the class ".animated" to the <p> child element
+                if (elementScrolled('#restaurant-video')) {
+
+                    $('#new-odo').html(20000);
+                    $('#odo-project').html(658);
+                    $('#odo-year').html(20);
+                    $('#w-days').html(450);
+                    // Your function here
+
+                }
+            });
+        });
     </script>
 </body>
 
