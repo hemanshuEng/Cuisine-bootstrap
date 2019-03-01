@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
     <link rel="stylesheet" href="./css/odometer-theme-default.css">
-    <script src="./js/odometer.js"></script>
+
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -162,33 +162,18 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="./js/odometer.js"></script>
 
     <script>
         $('#year').text(new Date().getFullYear());
         $(document).ready(function () {
-           
+            $('#new-odo').html(20000);
+            $('#odo-project').html(658);
+            $('#odo-year').html(20);
+            $('#w-days').html(450);
 
-            $(window).scroll(function () {
-                // This is then function used to detect if the element is scrolled into view
-                function elementScrolled(elem) {
-                    var docViewTop = $(window).scrollTop();
-                    var docViewBottom = docViewTop + $(window).height();
-                    var elemTop = $(elem).offset().top;
-                    return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
-                }
-
-                // This is where we use the function to detect if ".box2" is scrolled into view, and when it is add the class ".animated" to the <p> child element
-                if (elementScrolled('#resutarant-info')) {
-
-                    $('#new-odo').html(20000);
-                    $('#odo-project').html(658);
-                    $('#odo-year').html(20);
-                    $('#w-days').html(450);
-                    // Your function here
-
-                }
-            });
         });
+       
     </script>
 </body>
 
