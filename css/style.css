@@ -62,8 +62,39 @@
     left:0;
     width:100%;
     height: 100%;
-    background:rgba(0,0,0,0.5); */
+    background:rgba(0,0,0,0.5); 
 }
+#testimony{
+    position: relative;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+    color:#ffff;
+    overflow: hidden;
+  
+}
+.testimony-overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background:rgba(0,0,0,0.5);
+    z-index:-1;
+}
+.testimony-img{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:-2;
+}
+.quote-img{
+    width: 100px;
+    height: 100px;
+    
+}
+
 @media only screen and (min-width:768px){
 body{
     margin:0;

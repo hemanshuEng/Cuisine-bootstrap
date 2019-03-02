@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
     <link rel="stylesheet" href="./css/odometer-theme-default.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
 
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -414,11 +416,39 @@
             </div>
         </div>
         <div class=" m-5 text-center">
-        <button class="btn btn-dark border-0 ">View All Menu</button>
+            <button class="btn btn-dark border-0 ">View All Menu</button>
         </div>
     </section>
-
-
+    <!-- section of testimony-->
+    <section id="testimony">
+        <div class=" testimony-overlay"></div>
+        <img src="./img/pexels-photo-1640774.jpeg" alt="" class="w-100 testimony-img">
+        <div class="lobster mt-5 text-white text-center">Testimony</div>
+        <div class="m-3 text-white text-center h4">Happy Customer</div>
+        <div class="container">
+            <div class="row">
+                <div class="col ">
+                    <div class="slider">
+                        <div>
+                            <img src="./img/adult-beard-boy-220453.jpg" alt="" class="quote-img rounded-circle mx-auto">
+                            <p class="my-4">Cusisine has the friendliest staff! They're very attentive and great at offering suggestions if you can't decide what to order. I ordered the penne pasta with artichokes and was pleasantly surprised by how creamy and delicious the sauce was. Plus the portions were quite large, especially for the price. I'll definitely go back soon</p>
+                            <p class="my-4">Jone doe</p>
+                        </div>
+                        <div>
+                            <img src="./img/pexels-photo-736716.jpeg" alt="" class="quote-img rounded-circle mx-auto">
+                            <p class="my-4">Outstanding restaurant. Great quality without the prices of other restaurants of comparable quality. The staff is always pleasant as wel</p>
+                            <p class="my-4">Jone doe</p>
+                        </div>
+                        <div>
+                            <img src="./img/adult-beard-boy-220453.jpg" alt="" class="quote-img rounded-circle mx-auto">
+                            <p class="my-4">Fantastic: as far as good goes it doesnt get much better. Why go out and spend 200 for 2 when you can spend sixty for the same quality. Their specials are to die for and its a very warm and friendly place to eat.</p>
+                            <p class="my-4">Jone doe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
@@ -427,6 +457,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="./js/odometer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
 
     <script>
         $('#year').text(new Date().getFullYear());
@@ -436,6 +468,18 @@
             $('#odo-year').html(20);
             $('#w-days').html(450);
 
+        });
+        // $('.slider').slick({
+        //     infinite: true,
+        //     slideToShow: 1,
+        //     slideToScroll: 1,
+        // });
+        $('.slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 3000,
+            slidesToShow: 1,
+            adaptiveHeight: true
         });
     </script>
 </body>
